@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <style>
-        .category 
-        {
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<style>
+.category ul li  
+{
+display: block;
+text-decoration: none;
+}
+.category ul li a 
+{
+text-decoration: none;
+color: black;
+}
+/* pseudo element selector  */
+.category ul li::after 
+{
+ content: "🛒";  
+ padding: 10px 10px; 
+}
 
-        }
-    </style>
+.category1 ul li  
+{
+display: block;
+text-decoration: none;
+}
+.category1 ul li a 
+{
+text-decoration: none;
+color: black;
+}
+/* pseudo element selector  */
+.category1 ul li::before 
+{
+ content: "🛒";  
+ padding: 10px 10px; 
+}
+</style>
 </head>
 <body>
-    
-    <div class="category">
-        <ul>
-            <li><a href="">Furnitures </a></li>
-            <li><a href="">Furnitures </a></li>
-            <li><a href="">Furnitures </a></li>
-            <li><a href="">Furnitures </a></li>
-            <li><a href="">Furnitures </a></li>
-        </ul>
-    </div>
+
+<div class="category">
+<ul>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+</ul>
+</div>
+
+
+
+<div class="category1">
+<ul>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+<li><a href="">Furnitures </a></li>
+</ul>
+</div>
 
 </body>
 </html>

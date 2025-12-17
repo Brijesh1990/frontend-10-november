@@ -1,0 +1,82 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: auto;
+box-sizing: border-box;
+background-color: lightgray;    
+}
+.frm
+{
+    width: 30%;
+    height: auto;
+    margin: auto;
+    padding: 20px 25px  !important;
+    margin-top: 5%;
+    
+}
+.frm fieldset
+{
+    border: gray 3px dotted;
+    padding: 45px;
+}
+.frm legend 
+{
+    font-size: 35px;
+}
+
+/* attributes selector */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea
+{
+ width: 90%;
+ height: auto;
+ padding: 15px;
+ background-color: lightgray;
+ border: none;
+ border-bottom: solid 2px;   
+}
+
+::placeholder
+{
+    color: coral;
+}
+input[type="submit"]
+{
+width: 96%;
+ height: auto;
+ padding: 18px;
+ background-color: blue;
+ border: none;
+ color: white;  
+ border-radius: 12px;
+}
+
+input[type="submit"]:hover
+{
+width: 96%;
+ height: auto;
+ padding: 18px;
+ background-color: coral;
+ border: none;
+ color: white;  
+ border-radius: 12px;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+textarea:hover
+{
+ width: 90%;
+ height: auto;
+ padding: 15px;
+ background-color: white;
+ border: none;
+ border-bottom: solid 2px;   
+}
