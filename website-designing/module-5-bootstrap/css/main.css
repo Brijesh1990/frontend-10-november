@@ -1,0 +1,30 @@
+.footer-links li 
+{
+display: block;
+text-decoration: none;
+padding: 5px 2px;
+}
+.footer-links a 
+{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+.navbar-link
+{
+ width: 100%;
+ height: auto;   
+}
+.navbar-link li 
+{
+    text-decoration: none;
+    padding: 5px 35px;
+    display: inline-block;
+}
+.navbar-link a 
+{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 18px;
+}

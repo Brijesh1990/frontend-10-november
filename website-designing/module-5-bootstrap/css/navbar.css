@@ -1,0 +1,21 @@
+.navbar ul li 
+{
+display: inline-block;
+padding: 0px 35px;
+}
+.navbar ul 
+{
+margin-left: 25%;    
+}
+.navbar a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;
+font-size: 19px;
+text-transform: capitalize;
+}
+.dropdown:hover .dropdown-menu
+{
+ display: block;   
+}
