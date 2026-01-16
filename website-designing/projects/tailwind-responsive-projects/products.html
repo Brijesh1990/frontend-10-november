@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+<!-- used tailwind CDN here -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src='main.js'></script>
+</head>
+<body class="bg-gray-400">
+<!-- create a header for grocery app with call us search bocx and social media icons -->
+
+ <header class="bg-white text-dark p-5">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+        <!-- Logo + Call Us -->
+        <div class="flex items-center justify-between md:justify-start gap-6">
+          <h1 class="text-4xl text-green-600 font-bold">FreshMart</h1>
+        </div>
+
+        <!-- Search Box -->
+        <div class="w-full md:w-1/2">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search for fruits, vegetables..."
+              class="w-full rounded-full bg-gray-300 px-4 py-2 text-gray-700 focus:outline-none"
+            />
+            <button
+              class="absolute right-1 top-1 bottom-1 bg-green-700 px-4 rounded-full text-sm">
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-end gap-4">
+          
+          <!-- add cart -->
+          <button type="button" class="rounded-2xl"> 🛒 Cart(0)</button> 
+          <!-- Facebook -->
+          <a href="#" class="hover:text-gray-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12a10 10 0 10-11.6 9.9v-7H8v-3h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7
+                1 0 2 .2 2 .2v2.3h-1.1c-1.1 0-1.4.7-1.4 1.4V12H16l-.4 3h-2.6v7A10
+                10 0 0022 12z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="#" class="hover:text-gray-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2
+                5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0
+                01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5
+                3.5A4.5 4.5 0 1016.5 12 4.5 4.5 0 0012
+                7.5zm0 7.4a2.9 2.9 0 112.9-2.9A2.9
+                2.9 0 0112 14.9zm4.8-7.9a1.1
+                1.1 0 11-1.1-1.1 1.1 1.1 0 011.1 1.1z" />
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="#" class="hover:text-gray-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3
+                0 001.88-2.37 8.6 8.6 0
+                01-2.72 1.04 4.28 4.28
+                0 00-7.29 3.9A12.14
+                12.14 0 013 4.8a4.28
+                4.28 0 001.33 5.71 4.2
+                4.2 0 01-1.94-.54v.05a4.28
+                4.28 0 003.44 4.19 4.3
+                4.3 0 01-1.93.07 4.28
+                4.28 0 004 2.98A8.6
+                8.6 0 012 19.54 12.14
+                12.14 0 008.29 21c7.55
+                0 11.68-6.26 11.68-11.68
+                0-.18 0-.35-.01-.53A8.3
+                8.3 0 0022.46 6z" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  
+<!-- navigation -->
+<nav class="bg-blue-400 p-4 sticky top-0 z-50 w-full flex flex-wrap">      
+<div class="flex  items-center justify-between">
+<!-- Logo -->
+<a href="tel:(+91)-9998003879" class="sm:text-sm md:text-sm lg:text-xl font-semibold text-white uppercase">  
+<span>📞Call Us:(+91)-9998003879</span></a>
+<!-- Hamburger Button -->
+<button onclick="toggleMenu()" class="text-white text-3xl md:hidden ml-54">
+☰
+</button>
+</div>
+
+<!-- Navigation Menu -->
+<div class="ml-64"> 
+<ul id="mobileMenu"
+class="fixed top-0 left-0  h-full w-64 bg-blue-500 text-white
+transform -translate-x-full transition-transform duration-300
+flex flex-col gap-6 p-6 text-lg font-mono
+md:static md:translate-x-0 md:flex-row md:h-auto md:w-auto
+md:bg-transparent md:p-0 md:gap-8 md:items-center">
+
+<!-- Close button (mobile only) -->
+<li class="md:hidden">
+<button onclick="toggleMenu()" class="text-2xl">✕</button>
+</li>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+
+<!-- Dropdown -->
+<li class="relative group">
+<a href="register.html" class="block">My Account 👥</a>
+<!-- Desktop dropdown -->
+<ul class="hidden md:block md:absolute md:top-full md:left-0
+md:bg-blue-400 md:p-3 md:rounded md:shadow-lg
+md:opacity-0 md:invisible
+md:group-hover:opacity-100 md:group-hover:visible
+transition-all duration-300">
+
+<li><a href="register.html" class="block py-1">SignUp</a></li>
+<li><a href="login.html" class="block py-1">SignIn</a></li>
+</ul>
+</li>
+
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div> 
+</nav>
+
+<!-- create a responsive products grid for containing category also content here -->
+
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Section Header -->
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-bold text-gray-800">Shop by Category</h2>
+      <p class="mt-2 text-gray-500">
+        Fresh fruits, vegetables & daily essentials
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+      <!-- Categories -->
+     <aside class="lg:col-span-1 space-y-10">
+
+  <!-- Categories -->
+  <div>
+    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+      Categories
+    </h3>
+
+    <!-- Mobile Scroll / Desktop Stack -->
+    <div class="flex lg:block gap-3 overflow-x-auto lg:overflow-visible pb-2">
+      <button class="bg-green-600 text-white px-4 py-2 rounded-full whitespace-nowrap mt-2">
+        All
+      </button>
+      <button class="bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap hover:bg-green-100 mt-2">
+        Fruits
+      </button>
+      <button class="bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap hover:bg-green-100 mt-2">
+        Vegetables
+      </button>
+      <button class="bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap hover:bg-green-100 mt-2">
+        Dairy
+      </button>
+      <button class="bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap hover:bg-green-100 mt-2">
+        Bakery
+      </button>
+      <button class="bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap hover:bg-green-100 mt-2">
+        Dry Fruits
+      </button>
+    </div>
+  </div>
+
+  <!-- Latest News Marquee -->
+  <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+    <h3 class="text-lg font-semibold text-gray-800 mb-3">
+      Latest News
+    </h3>
+
+    <div class="overflow-hidden relative h-50">
+      <div class="absolute animate-pulse whitespace-nowrap text-sm text-green-700">
+       <marquee direction="up" class="h-50"> 
+        <p>🥬 Fresh vegetables arrived today! &nbsp;&nbsp; </p> 
+        <p> 🚚 Free delivery on orders above $25 &nbsp;&nbsp;</p>
+        <p> 🍎 Get organic apples at 20% off!</p>
+      </marquee>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offer Zone -->
+  <div>
+    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+      Offer Zone
+    </h3>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="border rounded-xl p-3 hover:shadow-md transition">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8IiDaVUIGKGuO9_zq1E_60unPFpnDV_OCQ&s"
+          class="h-20 w-full object-cover rounded-lg"
+          alt="Apple"
+        />
+        <h4 class="text-sm font-semibold mt-2">Fresh Apples</h4>
+        <p class="text-green-600 font-bold text-sm">$2.99</p>
+      </div>
+
+      <div class="border rounded-xl p-3 hover:shadow-md transition">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8IiDaVUIGKGuO9_zq1E_60unPFpnDV_OCQ&s"
+          class="h-20 w-full object-cover rounded-lg"
+          alt="Banana"
+        />
+        <h4 class="text-sm font-semibold mt-2">Bananas</h4>
+        <p class="text-green-600 font-bold text-sm">$1.99</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 50% OFF Section -->
+  <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+    <h3 class="text-lg font-semibold text-red-600 mb-4">
+      🔥 50% OFF
+    </h3>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-white border rounded-xl p-3 text-center hover:shadow-md transition">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8IiDaVUIGKGuO9_zq1E_60unPFpnDV_OCQ&s"
+          class="h-20 w-full object-cover rounded-lg"
+          alt="Bread"
+        />
+        <h4 class="text-sm font-semibold mt-2">Fresh Bread</h4>
+        <p class="text-xs text-gray-500 line-through">$2.50</p>
+        <p class="text-red-600 font-bold">$1.25</p>
+      </div>
+
+      <div class="bg-white border rounded-xl p-3 text-center hover:shadow-md transition">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8IiDaVUIGKGuO9_zq1E_60unPFpnDV_OCQ&s"
+          class="h-20 w-full object-cover rounded-lg"
+          alt="Milk"
+        />
+        <h4 class="text-sm font-semibold mt-2">Organic Milk</h4>
+        <p class="text-xs text-gray-500 line-through">$2.00</p>
+        <p class="text-red-600 font-bold">$1.00</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- 70% OFF Section -->
+  <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+    <h3 class="text-lg font-semibold text-red-600 mb-4">
+      🔥 70% OFF
+    </h3>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-white border rounded-xl p-3 text-center hover:shadow-md transition">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8IiDaVUIGKGuO9_zq1E_60unPFpnDV_OCQ&s"
+          class="h-20 w-full object-cover rounded-lg"
+          alt="Bread"
+        />
+        <h4 class="text-sm font-semibold mt-2">Fresh Bread</h4>
+        <p class="text-xs text-gray-500 line-through">$2.50</p>
+        <p class="text-red-600 font-bold">$1.25</p>
+      </div>
+
+      <div class="bg-white border rounded-xl p-3 text-center hover:shadow-md transition">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8IiDaVUIGKGuO9_zq1E_60unPFpnDV_OCQ&s"
+          class="h-20 w-full object-cover rounded-lg"
+          alt="Milk"
+        />
+        <h4 class="text-sm font-semibold mt-2">Organic Milk</h4>
+        <p class="text-xs text-gray-500 line-through">$2.00</p>
+        <p class="text-red-600 font-bold">$1.00</p>
+      </div>
+    </div>
+  </div>
+
+</aside>
+
+
+      <!-- Products Grid -->
+      <div class="lg:col-span-3">
+        <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6">
+
+          <!-- Product Card -->
+          <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"
+              alt="Apple"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Apples</h4>
+            <p class="text-sm text-gray-500">1kg</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$3.99</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw8nkHIJ_Afl3NucWPcGnnqP4XG5FCsc3mZg&s"
+              alt="Banana"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Bananas</h4>
+            <p class="text-sm text-gray-500">1 dozen</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.49</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-1dAsJetHBeTxEyri6OsE7AEQrUfDcHnvXg&s"
+              alt="Milk"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Organic Milk</h4>
+            <p class="text-sm text-gray-500">1 liter</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$1.99</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+           <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"
+              alt="Apple"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Apples</h4>
+            <p class="text-sm text-gray-500">1kg</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$3.99</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw8nkHIJ_Afl3NucWPcGnnqP4XG5FCsc3mZg&s"
+              alt="Banana"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Bananas</h4>
+            <p class="text-sm text-gray-500">1 dozen</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.49</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-1dAsJetHBeTxEyri6OsE7AEQrUfDcHnvXg&s"
+              alt="Milk"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Organic Milk</h4>
+            <p class="text-sm text-gray-500">1 liter</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$1.99</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+
+            <div class="border rounded-2xl p-4 hover:shadow-lg transition">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNy-6y9Z8Wh22cpBCWPbWVWKRC0QLuWE3ufg&s"
+              alt="Bread"
+              class="h-32 w-full object-cover rounded-xl"
+            />
+            <h4 class="mt-3 font-semibold text-gray-800">Fresh Bread</h4>
+            <p class="text-sm text-gray-500">500g</p>
+
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-green-600 font-bold">$2.29</span>
+              <button class="bg-green-600 text-white px-3 py-1.5 rounded-full text-sm hover:bg-green-700">
+                Add
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- footer section -->
+
+<footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 py-14">
+
+    <!-- Top Footer -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <h2 class="text-2xl font-bold text-white">Fresh Mart</h2>
+        <p class="mt-4 text-sm text-gray-400">
+          Fresh Mart delivers farm-fresh groceries, fruits, vegetables,
+          and daily essentials straight to your doorstep.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="hover:text-white transition">
+            <!-- Facebook -->
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-3h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7
+              1 0 2 .2 2 .2v2.3h-1.1c-1.1 0-1.4.7-1.4 1.4V12H16l-.4 3h-2.6v7A10 10 0 0022 12z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="#" class="hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2
+              5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10z"/>
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="#" class="hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37
+              8.6 8.6 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0
+              013 4.8a4.28 4.28 0 001.33 5.71 4.2 4.2 0 01-1.94-.54v.05a4.28
+              4.28 0 003.44 4.19 4.3 4.3 0 01-1.93.07 4.28 4.28 0 004
+              2.98A8.6 8.6 0 012 19.54 12.14 12.14 0 008.29 21c7.55 0
+              11.68-6.26 11.68-11.68 0-.18 0-.35-.01-.53A8.3 8.3 0
+              0022.46 6z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Links -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="shop.html" class="hover:text-white">Shop</a></li>
+          <li><a href="category.html" class="hover:text-white">Categories</a></li>
+          <li><a href="offers.html" class="hover:text-white">Offers</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+        <ul class="space-y-2 text-sm">
+          <li>📍 123 Fresh Street, New York</li>
+          <li>📞 +1 234 567 890</li>
+          <li>✉ support@freshmart.com</li>
+          <li>⏰ Mon – Sun: 8am – 10pm</li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Newsletter</h3>
+        <p class="text-sm text-gray-400 mb-4">
+          Subscribe to get special offers & updates.
+        </p>
+
+        <form class="flex">
+          <input
+            type="email"
+            placeholder="Your email"
+            class="w-full px-4 py-2 rounded-l-lg text-black bg-white focus:outline-none"
+          />
+          <button
+            class="bg-green-600 px-4 py-2 rounded-r-lg text-white hover:bg-green-700 transition">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-400">
+      © 2026 Fresh Mart. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+<script>
+function toggleMenu() {
+document.getElementById("mobileMenu")
+.classList.toggle("-translate-x-full");
+}
+</script>
+</body>
+</html>
