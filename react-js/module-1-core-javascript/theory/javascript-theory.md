@@ -35,7 +35,7 @@ window.location='https://www.tops-int.com'
 
 ``` 
 
-**examples to call in head**
+**examples to call in body**
 
 ```
 <body>
