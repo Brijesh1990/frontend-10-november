@@ -1,0 +1,2 @@
+alert('hi i am brijesh and i purchased shoes from flipkart')
+window.location='https://www.flipkart.com/urbanbox-sneakers-men/p/itmb3e2c6aa2ae94?pid=SHOH4V84BG4JDXZH&lid=LSTSHOH4V84BG4JDXZHXABZJQ&marketplace=FLIPKART&q=shoes+for+men&store=osp%2Fcil&srno=s_1_3&otracker=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_na&fm=search-autosuggest&iid=60e9e513-d90f-4641-bb74-931ca54ac990.SHOH4V84BG4JDXZH.SEARCH&ppt=sp&ppn=sp&ssid=s7m8630fow0000001769608654120&qH=9b802224ae37096b';
