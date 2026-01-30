@@ -183,4 +183,99 @@ window.location='https://www.flipkart.com/urbanbox-sneakers-men/p/itmb3e2c6aa2ae
 
 
 ## what is variables in javascript
+
+  javascript variables is used to stored information about data i.e called variables. 
+
+  **How to define  variables javascript**
+
+  1. var a=10;
+  2. let a=20;
+  3. const name="Brijesh"
+  4. a=15.456;
+
+  **difference b/w var | let | const**
+
+  1. var : 
+      var is used to declared any variables
+      var is used to re-assigned and re-declared    
+      
+      ```
+       var a=10;
+       var a=10;
+       console.log(a)
+       console.log(a)
+
+      ```
+
+  
+  2. let : 
+      let is used to declared any variables
+      let is used to re-assigned but can not re-declared the value    
+      
+      ```
+       let a=10;
+       let a=10;
+       console.log(a)
+       console.log(a)
+
+      ```    
+      
+  2. const : 
+      const is used to declared any variables
+      const is used  to can not  re-assigned and  can not be  re-declared the value    
+      
+      ```
+       const a=10;
+       console.log(a)
+       
+
+      ```    
+
+## how to debug javascript error 
+
+   1. add debugger;
+   2. print in condole.log() check error in console
+   3. used exception handeling
+
+
+   ```
+   <script>
+// javascript is nor a compiler based language
+// javascript is a interpreter based language
+debugger;
+let a=20;
+let b=30;
+let c=a+b;
+console.log("additions of numbers is :",c);
+
+</script>
+   ``` 
+
+   ```
+<script>
+let a=20;
+let b=30;
+let c=a+b;
+console.log("additions of numbers is :",c);
+
+</script>
+   ```
+```
+<script>   
+try 
+{
+let a=20;
+let b=30;
+let c=a+b;
+document.write("additions of numbers is :",c);
+}  
+catch(err)
+{
+document.write("error generated",err);
+} 
+</script>
+
+  ```
+
+
 ## what is variable data-type in javascript 
