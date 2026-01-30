@@ -278,4 +278,25 @@ document.write("error generated",err);
   ```
 
 
-## what is variable data-type in javascript 
+## what is  data-type in javascript 
+
+   data type is called which type of data stored inside of variables.
+
+   **types of data type**
+
+   1. primitive data type
+   2. non-primitive data type
+
+
+   **primitive datatype**
+   1. number
+   2. string 
+   3. boolean
+   4. undefined
+   5. null
+   6. bigInteger
+   7. Symbol
+
+   **non-primitive datatype**
+   1. object
+   2. array
