@@ -120,3 +120,67 @@ window.location='https://www.flipkart.com/urbanbox-sneakers-men/p/itmb3e2c6aa2ae
     document.writeln("My name is Brijesh");
    
    ```
+
+
+   **window.print()**
+   this is a method in javascript used to prind window content 
+
+   ```
+    window.print()
+   ```
+
+   **document.getElementById()**
+   this is a method is also called DOM(document object model) manipulation in javascript 
+   THis method is used to access html elements inside of javascript 
+
+   ```
+    document.getElementById()
+
+   ```
+
+
+## javascript used as programming language 
+
+## what is operator in javascript 
+  javascript operator 
+  **type of operator**
+  1. airthematic operator
+     examples : + , -, % , / * etc  
+  2. assingment operator 
+     example : =, == , != etc 
+  3. logical operator 
+     examples : &&, ||, !
+  4. comparision operator
+     examples: > , < , >= , <= 
+     examples: ===,  
+  5. ternary operator 
+     examples: ? : 
+  6. increment decrement operator
+     examples: ++, --
+  7. betwise operator 
+     examples : << left shift , >>  right shift, & (and) , | (or) , ^ (xor), ~ (not)
+  8. string concatenation operator 
+     examples : "" + ""
+  9. sorthand operator 
+     examples : +=, -=, /=, *= etc 
+                a+=b;
+                a=a+b;
+
+
+ **operator list in table format**
+
+ |operator name             | examples of operator |
+ |--------------------------|----------------------|
+ |airthematic operator      |+, -, /, %, * etc     |
+ |logical operator          |&& , ||, !            |
+ |ternary operator          |? :                   |
+ |betwise operator          |>> , << , & , | , ^   |
+ |string concatenation operator   | "" + ""     |
+ |increment/ decrement operator      |++, --     |
+ |assingment operator      |=, ==, ,!=     |
+ |sorthand operator      |+=, -=, /=, %=, *=      |
+ |comparision operator      |> , < ,>= , <=, ===     |
+
+
+## what is variables in javascript
+## what is variable data-type in javascript 
