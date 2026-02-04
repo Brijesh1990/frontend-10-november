@@ -300,3 +300,36 @@ document.write("error generated",err);
    **non-primitive datatype**
    1. object
    2. array
+
+
+## what is function 
+  **function**
+  # definition : 
+  A function is a block of code that can return a values i.e called function 
+  or
+  A function a block of code      
+
+  **syntax**
+
+  ```
+  function function name()
+  {
+    statements;
+  }
+  call a function 
+
+  ```
+  **examples**
+
+  ```
+   function display()
+ {
+   var a=10;
+   var b=20;
+   var c=a+b;
+   console.log("Additions of numbers is :"+c) 
+ }   
+  //  function call here
+  display();
+
+  ```
