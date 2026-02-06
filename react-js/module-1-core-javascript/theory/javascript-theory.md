@@ -135,10 +135,7 @@ window.location='https://www.flipkart.com/urbanbox-sneakers-men/p/itmb3e2c6aa2ae
 
    ```
     document.getElementById()
-
    ```
-
-
 ## javascript used as programming language 
 
 ## what is operator in javascript 
@@ -150,7 +147,7 @@ window.location='https://www.flipkart.com/urbanbox-sneakers-men/p/itmb3e2c6aa2ae
      example : =, == , != etc 
   3. logical operator 
      examples : &&, ||, !
-  4. comparision operator
+  4. comparison operator
      examples: > , < , >= , <= 
      examples: ===,  
   5. ternary operator 
@@ -234,7 +231,7 @@ window.location='https://www.flipkart.com/urbanbox-sneakers-men/p/itmb3e2c6aa2ae
 ## how to debug javascript error 
 
    1. add debugger;
-   2. print in condole.log() check error in console
+   2. print in console.log() check error in console
    3. used exception handeling
 
 
@@ -307,7 +304,7 @@ document.write("error generated",err);
   # definition : 
   A function is a block of code that can return a values i.e called function 
   or
-  A function a block of code      
+  A function is a block of code that is called function       
 
   **syntax**
 
@@ -333,3 +330,94 @@ document.write("error generated",err);
   display();
 
   ```
+
+  **function pass with parameter**
+
+  ```
+   function display(fname,lname)
+  {
+  var firstname="My firstname is :"+fname+"\n";
+  var lastname="My lastname is :"+lname+"\n";   
+  console.log(firstname)
+  console.log(lastname)
+ }
+ display("Brijesh","Pandey");
+  ```
+
+**how to call a function**
+1. call by value
+2. call by reference   
+
+```
+<script>
+ //call by value 
+ function display(a,b)
+ {
+      return a+b;
+ }
+ console.log(display(10,20))
+</script>
+```
+```
+<script>
+function display(fname)
+{
+   var firstname="My firstname is :"+fname;
+   console.log(firstname); 
+}    
+display("Brijesh");
+</script>
+```
+# types of function 
+ 1. user defined function 
+ 2. pre-defined function 
+
+```
+<script>
+function sweta(fnm)
+{
+ let firstname="my firstname is :"+fnm;
+ console.log(firstname);
+}    
+sweta("sweta");
+</script>
+```
+
+```
+<script>
+var name="Brijesh kumar pandey";
+console.log(typeof(name));    
+</script>
+```
+
+
+## how to find square of numbers 
+
+  in javascript we find the square of numbers using inbuild function Math()
+
+  **examples**
+
+  ```
+  <script>
+  var number=4;
+   // var res=Math.pow(number,2);
+   // console.log(res)
+   var res=Math.pow(number,3);
+   console.log(res)
+  </script>
+  ```
+
+## done task ........
+
+ 1.  w.a.p to print all output method in javascript
+ 2.  w.a.p to print square of numbers 
+ 3.  w.a.p to print simple interest 
+ 4.  w.a.p to print compound interest
+ 5.  w.a.p to print are of circle 
+ 6.  w.a.p to print area of rectangle 
+ 7.  w.a.p to print are ao triangle
+ 8.  w.a.p to print a random value 
+ 9.  w.a.p to print square root of numbers
+ 10. w.a.p to print i am adult or child without if - else condition
+
+
