@@ -1,0 +1,31 @@
+#main-content
+{
+    display: none;
+}
+#loader
+{
+width: 500px;
+height: 450px;
+left: 30%;
+top: 18%;
+position: absolute;
+background: url('../images/pet1.gif') no-repeat;
+background-position: center;
+background-size: 500px 450px; 
+}
+@media only screen  and (max-width:580px)
+{
+#loader
+{
+width: 60%;
+height: 450px;
+left: 20%;
+top: 10%;
+position: absolute;
+align-items: center;
+background: url('../images/pet1.gif') no-repeat;
+background-position: center;
+background-size: 500px 450px;    
+}   
+} 
+@import 'tailwindcss'

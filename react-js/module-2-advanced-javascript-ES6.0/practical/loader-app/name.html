@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Systems</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Transition for sidebar */
+    .sidebar {
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+  <!-- called external javascript -->
+  <script src="js/main.js"></script>
+</head>
+<body onload="mainFunction()" class="flex flex-col min-h-screen font-sans ">
+ <div id="loader"></div>
+  <section id="main-content">  
+  <!-- Header -->
+  <header class="bg-green-600 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">Pet Systems</h1>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="name.html" class="hover:underline">Print Name</a>
+        <a href="#" class="hover:underline">Shop</a>
+        <a href="#" class="hover:underline">Contact</a>
+      </nav>
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar for Mobile Navigation -->
+  <aside id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-green-700 text-white transform -translate-x-full sidebar z-50 shadow-lg">
+    <div class="p-4 flex justify-between items-center border-b border-green-600">
+      <h2 class="text-xl font-bold">Menu</h2>
+      <button id="close-btn" class="focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col mt-4 space-y-3 px-4">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="name.html" class="hover:underline">Print Name</a>
+      <a href="#" class="hover:underline">Shop</a>
+      <a href="#" class="hover:underline">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+  <!-- Slider Section -->
+  <section class="relative w-full overflow-hidden mt-4">
+    <div class="carousel flex transition-transform duration-500">
+      <div class="min-w-full bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN0RkiTt168a-U4uy_ZXZhPlaJnVO9OLM8Hg&s')] bg-cover bg-center h-64 md:h-96 flex items-center justify-center text-white text-3xl font-bold">
+        Cute Cats
+      </div>
+      <div class="min-w-full bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY7lwITLDQDDeDyEa2Xem6i6qnH9iN13hHmA&s')] bg-cover bg-center h-64 md:h-96 flex items-center justify-center text-white text-3xl font-bold">
+        Playful Puppies
+      </div>
+      <div class="min-w-full bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmj6E8WoQBF-L7GAYuI7pCm555M44acU8X5Q&s')] bg-cover bg-center h-64 md:h-96 flex items-center justify-center text-white text-3xl font-bold">
+        Exotic Pets
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <main class="flex-1 container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-xl font-semibold mb-2">Print Name</h2>
+      <p class="text-gray-600">Find your perfect furry friend and give them a loving home.</p>
+    
+      <div class="w-full">
+        <!-- <p id="demo" class="text-amber-600 font-bold text-2xl"></p> -->
+        <form>
+            <input type="text" id="name" class="p-3 w-full  border-amber-900 border-2 mt-3" placeholder="Enter Name *" />
+            <br><br>
+            <button type="button" onclick="result()" class="bg-amber-600 p-3 rounded-2xl">Submit</button>
+        </form>
+      </div>
+    
+    </div>
+     </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 text-white py-6 mt-8">
+    <div class="container mx-auto px-4 text-center md:text-left md:flex md:justify-between">
+      <p>&copy; 2026 Pet Systems. All rights reserved.</p>
+      <div class="space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  </section>
+  <!-- Scripts -->
+   <!--sweet alert CDN  -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    // Carousel
+    const carousel = document.querySelector('.carousel');
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % carousel.children.length;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+
+    // Sidebar toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-btn');
+
+    function openSidebar() {
+      sidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    menuBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+  </script>
+
+</body>
+</html>
