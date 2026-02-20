@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-User Login Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">Login</h1>
+        <p class="text-gray-600 text-center mb-6">Select user and enter password</p>
+
+        <form id="loginForm" class="space-y-4">
+            <!-- User Dropdown -->
+            <div>
+                <label for="userSelect" class="block text-sm font-medium text-gray-700 mb-2">
+                    Select User
+                </label>
+                <select id="userSelect" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <option value="">-- Choose a user --</option>
+                    <option value="admin">Admin</option>
+                    <option value="user1">John Doe</option>
+                    <option value="user2">Jane Smith</option>
+                    <option value="user3">Mike Johnson</option>
+                </select>
+            </div>
+
+            <!-- Password Input -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                    Password
+                </label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Enter your password"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                >
+            </div>
+
+            <!-- Remember Me -->
+            <div class="flex items-center">
+                <input 
+                    type="checkbox" 
+                    id="remember" 
+                    class="w-4 h-4 text-blue-500 rounded"
+                >
+                <label for="remember" class="ml-2 text-sm text-gray-600">
+                    Remember me
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-200"
+            >
+                Login
+            </button>
+        </form>
+
+        <!-- Footer -->
+        <p class="text-center text-gray-600 text-sm mt-6">
+            Don't have an account? 
+            <a href="#" class="text-blue-500 hover:underline">Sign up</a>
+        </p>
+    </div>
+
+    <script>
+            document.getElementById('loginForm').addEventListener('submit', function(e) 
+            {
+            e.preventDefault();
+            const user = document.getElementById('userSelect').value;
+            const password = document.getElementById('password').value;
+            alert(`Logged in as: ${user}`);
+        });
+    </script>
+</body>
+</html>

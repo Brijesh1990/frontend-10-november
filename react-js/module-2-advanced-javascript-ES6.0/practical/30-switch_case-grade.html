@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grading System Form</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+<div class="min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-md bg-white rounded-lg shadow-md p-6">
+<h1 class="text-2xl font-bold text-gray-800 mb-6">Grading System Enter(A,B,C)</h1>
+
+<form id="gradingForm" class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Enter Grade</label>
+<input type="text" id="grade" placeholder="Enter Grade" required 
+class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+<button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">
+Print
+</button>
+</form>
+
+<div id="result" class="mt-6 hidden p-4 bg-blue-50 border border-blue-200 rounded-lg">
+<p class="text-2xl font-bold text-blue-600 mt-3">Grade: <span id="resultGrade"></span></p>
+</div>
+</div>
+</div>
+
+<script>
+
+function calculateGrade() 
+{
+    
+    var grade=document.getElementById("grade").value;
+    switch(grade)
+    {
+        case 'A':
+        document.getElementById("resultGrade").innerHTML="You are topper";
+        break;
+
+        case 'B':
+        
+        document.getElementById("resultGrade").innerHTML="You are average students";
+        break;
+        case 'C':
+        document.getElementById("resultGrade").innerHTML="You are failed";
+        break;
+
+        default:
+        
+        document.getElementById("resultGrade").innerHTML="Your grade is not matched";
+          break;
+          
+    }
+}
+
+document.getElementById('gradingForm').addEventListener('submit', function(e) {
+e.preventDefault();
+
+var grade = calculateGrade();
+document.getElementById('result').classList.remove('hidden');
+});
+</script>
+</body>
+</html>
