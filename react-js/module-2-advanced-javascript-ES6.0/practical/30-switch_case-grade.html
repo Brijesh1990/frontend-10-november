@@ -32,28 +32,28 @@ Print
 
 function calculateGrade() 
 {
-    
-    var grade=document.getElementById("grade").value;
-    switch(grade)
-    {
-        case 'A':
-        document.getElementById("resultGrade").innerHTML="You are topper";
-        break;
 
-        case 'B':
-        
-        document.getElementById("resultGrade").innerHTML="You are average students";
-        break;
-        case 'C':
-        document.getElementById("resultGrade").innerHTML="You are failed";
-        break;
+var grade=document.getElementById("grade").value;
+switch(grade)
+{
+case 'A':
+document.getElementById("resultGrade").innerHTML="You are topper";
+break;
 
-        default:
-        
-        document.getElementById("resultGrade").innerHTML="Your grade is not matched";
-          break;
-          
-    }
+case 'B':
+
+document.getElementById("resultGrade").innerHTML="You are average students";
+break;
+case 'C':
+document.getElementById("resultGrade").innerHTML="You are failed";
+break;
+
+default:
+
+document.getElementById("resultGrade").innerHTML="Your grade is not matched";
+break;
+
+}
 }
 
 document.getElementById('gradingForm').addEventListener('submit', function(e) {
