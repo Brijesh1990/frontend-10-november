@@ -1,0 +1,39 @@
+body 
+{
+margin: 0;  
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;
+}
+.app 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;  
+}
+.iconSize
+{
+font-weight: 800;
+font-size: 22px;
+color: blue;  
+animation: 0.8s ease infinite fadeIn;
+}
+.parent 
+{
+width: 60%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+display: flex;
+flex-wrap: wrap;    
+}
+.child 
+{
+width: 40%;
+height: auto;
+margin: 10px;
+padding: 15px;
+box-shadow: 2px 5px 5px gray;
+
+}
