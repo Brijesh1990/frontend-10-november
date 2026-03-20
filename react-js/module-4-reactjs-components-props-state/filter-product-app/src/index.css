@@ -1,0 +1,51 @@
+body 
+{
+background-color: aquamarine;
+}
+.app
+{
+width: 70%;
+height: auto;
+margin: auto;
+margin-top: 8%;  
+}
+.app h1 
+{
+font-size: 45px;
+letter-spacing: 1px;  
+}
+.app button 
+{
+width: 18%;
+height: auto;
+margin: 9px;
+padding: 12px;
+border: 0;
+background-color: white;
+font-size: 18px;  
+}
+.product
+{
+width: 100%;
+height: auto;
+margin: auto;
+text-align: center;
+display: flex;
+flex-wrap: wrap;
+}
+.product-grid 
+{
+width: 22%;
+height: auto;
+margin: 5px;
+padding: 8px;
+text-align: center;
+background-color: white;
+border-radius: 5px;
+border: solid 1px lightgray;
+}
+.product-grid img 
+{
+width: 70%;
+height: 140px;  
+}
