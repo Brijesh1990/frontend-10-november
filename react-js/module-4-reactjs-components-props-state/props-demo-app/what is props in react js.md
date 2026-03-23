@@ -12,6 +12,7 @@
   3. props pass data parent to child components
   4. props read only data (immutable) can not be changed 
   5. props access jsx data as attributes 
+  6. props pass a dynamic data for more readable
 
     ```
       <h1>Name is : {props.name}</h1>
@@ -60,3 +61,23 @@
  
     export default EmployeeDetails
    ```
+
+
+# props destructuring pass multiple arguments in function or props drilling 
+
+  1. pass a multiple arguments using objects in function i.e called props drilling or props destructuring to read data 
+
+    **examples of destrucruring of data via props**
+
+    ```
+     function App({name,age,salary,address})
+
+     {
+        return(
+            <>
+              <h1>Name os employee : {name}</h1>
+            </>
+        )
+     }
+
+    ```
