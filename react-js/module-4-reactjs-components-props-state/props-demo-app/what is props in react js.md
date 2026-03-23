@@ -13,18 +13,19 @@
   4. props read only data (immutable) can not be changed 
   5. props access jsx data as attributes 
 
-      ```
+    ```
       <h1>Name is : {props.name}</h1>
       <h1>Id is  : {props.id}</h1>
       <h1>salary is  : {props.salary}</h1>
 
-      ```
+    ```
 
  **props architectures**
    1. pass data parent to child 
 
       ```
        parent => child 
+    
       ```     
 
     ![alt text](image.png)    
@@ -52,8 +53,8 @@
      
       </div>
         </>
-    )
-}
-
-export default EmployeeDetails
-    ```
+       )
+     }
+ 
+    export default EmployeeDetails
+   ```
