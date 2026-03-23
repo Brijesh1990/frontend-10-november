@@ -35,13 +35,13 @@
     ![alt text](image-1.png)
 
 
-    ***examples of props**
+    **examples of props**
 
 
     ```
-      import React from "react";
-function EmployeeDetails(props)
-{
+    import React from "react";
+    function EmployeeDetails(props)
+    {
     return(
         <>
             <div className="app">
