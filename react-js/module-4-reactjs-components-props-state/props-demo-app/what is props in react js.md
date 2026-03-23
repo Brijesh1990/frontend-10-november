@@ -21,6 +21,14 @@
     ```
 
  **props architectures**
+
+  ![alt text](image-2.png)   
+
+  **or**
+
+ ![alt text](image-3.png)
+
+
    1. pass data parent to child 
 
       ```
@@ -28,13 +36,7 @@
     
       ```     
 
-    ![alt text](image.png)    
-
-    or
-
-
-    ![alt text](image-1.png)
-
+  
 
     **examples of props**
 
