@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white flex">
+
+  <!-- SIDEBAR -->
+  <aside class="w-[280px] md:w-[300px] h-screen bg-black p-3 flex flex-col justify-between">
+
+    <!-- TOP -->
+    <div>
+
+      <!-- Library Header -->
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-sm font-semibold text-gray-300">Your Library</h2>
+        <button class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 hover:bg-neutral-800 transition">
+          +
+        </button>
+      </div>
+
+      <!-- Playlist Card -->
+      <div class="bg-neutral-900 rounded-lg p-4 mb-4">
+        <h3 class="font-semibold mb-1">Create your first playlist</h3>
+        <p class="text-sm text-gray-400 mb-3">
+          It’s easy, we’ll help you
+        </p>
+        <button class="bg-white text-black text-sm font-semibold px-4 py-2 rounded-full hover:scale-105 transition">
+          Create playlist
+        </button>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="space-y-4">
+
+      <!-- Links -->
+      <div class="text-xs text-gray-400 flex flex-wrap gap-x-4 gap-y-2">
+        <a href="#" class="hover:underline">Legal</a>
+        <a href="#" class="hover:underline">Safety & Privacy Center</a>
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Cookies</a>
+        <a href="#" class="hover:underline">About Ads</a>
+        <a href="#" class="hover:underline">Accessibility</a>
+      </div>
+
+      <!-- Cookies Link -->
+      <div>
+        <a href="#" class="text-sm text-white hover:underline">Cookies</a>
+      </div>
+
+      <!-- Language Button -->
+      <button class="flex items-center gap-2 border border-gray-600 px-3 py-1.5 rounded-full text-sm hover:border-white transition">
+        🌐 English
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT (for demo) -->
+  <main class="flex-1 bg-neutral-900 p-6 hidden md:block">
+    <h1 class="text-2xl font-bold">Main Content</h1>
+  </main>
+
+</body>
+</html>
