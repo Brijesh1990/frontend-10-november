@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 export default function Header() {
   return (
    <>
@@ -67,12 +68,15 @@ export default function Header() {
       <div className="hidden lg:block h-6 w-px bg-gray-600" />
       {/* Auth Buttons */}
       <div className="flex items-center gap-2">
-        <button className="text-sm text-gray-300 hover:text-white hidden sm:block">
+         <Link to="/create-account"><button className="text-sm text-gray-300 hover:text-white hidden sm:block">
           Sign up
         </button>
-        <button className="bg-white text-black text-sm px-4 py-2 rounded-full font-semibold hover:scale-105 transition">
+        </Link>
+       <Link to="/login-with-us">
+       <button className="bg-white text-black text-sm px-4 py-2 rounded-full font-semibold hover:scale-105 transition">
           Log in
         </button>
+        </Link>
       </div>
     </div>
   </header>

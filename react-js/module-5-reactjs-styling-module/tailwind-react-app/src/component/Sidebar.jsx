@@ -8,16 +8,31 @@ export default function Sidebar() {
     {/* Library Header */}
     <div className="flex items-center justify-between mb-4">
       <h2 className="text-sm font-semibold text-gray-300">Your Library</h2>
-      <button className="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 hover:bg-neutral-800 transition">
+      <button className="w-8 h-8 flex items-center justify-center rounded-full bg-white hover:bg-neutral-800 transition">
         +
       </button>
     </div>
     {/* Playlist Card */}
     <div className="bg-neutral-900 rounded-lg p-4 mb-4">
-      <h3 className="font-semibold mb-1">Create your first playlist</h3>
+      <h3 className="font-semibold mb-1 text-white">Create your first playlist</h3>
       <p className="text-sm text-gray-400 mb-3">It’s easy, we’ll help you</p>
       <button className="bg-white text-black text-sm font-semibold px-4 py-2 rounded-full hover:scale-105 transition">
         Create playlist
+      </button>
+    </div>
+
+
+       <div className="bg-neutral-900 rounded-lg p-4 mb-4">
+      <h3 className="font-semibold mb-1 text-white">Create your first playlist</h3>
+      <p className="text-sm text-gray-400 mb-3">It’s easy, we’ll help you</p>
+      <button className="bg-white text-black text-sm font-semibold px-4 py-2 rounded-full hover:scale-105 transition">
+        Browse podcast
+      </button>
+    </div>
+
+       <div className="bg-neutral-900 rounded-lg p-4 mb-4">
+      <button className="bg-white text-black text-sm font-semibold px-4 py-2 rounded-full hover:scale-105 transition">
+      <span className='animate-pulse'> 🟤 </span> English
       </button>
     </div>
 
