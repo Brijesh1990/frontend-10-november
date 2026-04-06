@@ -1,0 +1,101 @@
+const Data=[
+    {
+     id:1,
+     name:"sanket",
+     age:24,
+     salary:24500,
+     photo:"https://static.vecteezy.com/system/resources/thumbnails/048/216/761/small/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png",   
+    },
+    {
+     id:2,
+     name:"sweta",
+     age:23,
+     salary:25500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdxGHGI80UZ-3LIu6sHyLk1TYPl2hvoIGfw&s",   
+    },
+    {
+     id:3,
+     name:"krishna",
+     age:25,
+     salary:22500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG9GwJx_hx5p8caTYLyf5exLahCXCU8M94HQ&s",   
+    },
+    {
+     id:4,
+     name:"dhruv",
+     age:34,
+     salary:84500,
+     photo:"https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001877.png",   
+    },
+    {
+     id:5,
+     name:"mayur",
+     age:32,
+     salary:924500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_91vRc9J5F_5ihw8mHZYRSnmSRmng91vew&s",   
+    },
+    {
+     id:6,
+     name:"vrinda",
+     age:18,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Fl2cCpeYOr-EACa3QThOLRM7j-BqeosXaA&s",   
+    },
+    {
+     id:7,
+     name:"Neeldeep sinh",
+     age:20,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0iBqah79bKNICfIfHfZDtZ4pVS-9cfet3HA&s",   
+    },
+
+    {
+     id:8,
+     name:"Neeldeep sinh",
+     age:20,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0iBqah79bKNICfIfHfZDtZ4pVS-9cfet3HA&s",   
+    },
+
+    {
+     id:9,
+     name:"Neeldeep sinh",
+     age:20,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0iBqah79bKNICfIfHfZDtZ4pVS-9cfet3HA&s",   
+    },
+
+     {
+     id:8,
+     name:"Neeldeep sinh",
+     age:20,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0iBqah79bKNICfIfHfZDtZ4pVS-9cfet3HA&s",   
+    },
+
+    {
+     id:9,
+     name:"Neeldeep sinh",
+     age:20,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0iBqah79bKNICfIfHfZDtZ4pVS-9cfet3HA&s",   
+    },
+
+     {
+     id:8,
+     name:"Neeldeep sinh",
+     age:20,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0iBqah79bKNICfIfHfZDtZ4pVS-9cfet3HA&s",   
+    },
+
+    {
+     id:9,
+     name:"Neeldeep sinh",
+     age:20,
+     salary:34500,
+     photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0iBqah79bKNICfIfHfZDtZ4pVS-9cfet3HA&s",   
+    }
+]
+
+export default Data
