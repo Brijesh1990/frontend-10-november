@@ -4,6 +4,16 @@ function App()
 {
   // destructuring of state
   const[name,setName]=useState("Brijesh kumar Pandey");
+  // useState() pass number, object , array , boolean 
+  const addData=(()=>{
+    setName({
+      id:1,
+      name:"brijesh",
+      age:35,
+      salary:89500
+    }
+  )
+  })
   return(
     <>
      <Container className="w-50 mx-auto bg-primary rounded-3 p-5 mt-5 app">
